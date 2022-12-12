@@ -1,0 +1,22 @@
+footer {
+    width: 100%;
+    padding: 4rem 2rem;
+    /* background-color: #111; */
+    background-color: #081d36;
+
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.icons {
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    opacity: .6;
+    transition: .3s;
+}
+
+.icons:hover {
+    opacity: 1;
+}
