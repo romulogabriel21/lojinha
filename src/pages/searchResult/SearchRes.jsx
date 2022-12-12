@@ -1,5 +1,6 @@
+import { useMemo } from 'react'
 import {useState, useEffect} from 'react'
-import { Link, useSearchParams } from 'react-router-dom'
+import { useSearchParams } from 'react-router-dom'
 import Card from '../card/Card'
 
 
@@ -11,7 +12,7 @@ const SearchRes = () => {
 
   const [searchParams] = useSearchParams()
 
-  const categorys = ['MLB1039', 'MLB1051', 'MLB1000', 'MLB1144', 'MLB5726']
+  const categorys = useMemo(['MLB1039', 'MLB1051', 'MLB1000', 'MLB1144', 'MLB5726'],[])
 
   const query = searchParams.get('q')
   
@@ -30,7 +31,7 @@ const SearchRes = () => {
   useEffect(() => {
     categorys.map((category) => getSearch(urlSearch, category))
 
-  }, [query])
+  }, [getSearch, categorys])
 
   return (
     <>

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
 import Card from "../card/Card"
 import './Home.css'
 
@@ -30,7 +29,7 @@ const Home = ({category, titleH2}) => {
             <div className="container" >
                 {
                     products.map((product) => 
-                    <a target='_blank' href={product.permalink} key={product.id} to={`/product_details/${product.id}`} className="link-card" >
+                    <a target='_blank' rel="noreferrer" href={product.permalink} key={product.id} to={`/product_details/${product.id}`} className="link-card" >
                         <Card
                                 image={product.thumbnail}
                                 title={product.title}
