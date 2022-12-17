@@ -1,0 +1,3 @@
+[submodule "lojinha"]
+	path = lojinha
+	url = https://github.com/romulogabriel21/lojinha.git
